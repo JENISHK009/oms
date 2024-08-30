@@ -1,0 +1,49 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "cron": "^3.1.7",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "firebase-admin": "^12.3.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.14",
+    "pg": "^8.12.0",
+    "pg-format": "^1.0.4",
+    "puppeteer": "^23.1.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-adblocker": "^2.13.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "razorpay": "^2.9.4",
+    "stream": "^0.0.3",
+    "stripe": "^16.8.0",
+    "xmlbuilder": "^15.1.1"
+  },
+  "name": "oms-seller-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npm run build && npm run dev",
+    "dev": "nodemon --exec babel-node src/server.js",
+    "build": "babel src --out-dir dist",
+    "serve": "npm run build && node dist/server.js",
+    "pm2:start": "pm2 start ecosystem.config.cjs --env development"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.24.7",
+    "@babel/core": "^7.24.7",
+    "@babel/node": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/register": "^7.24.6",
+    "nodemon": "^3.1.3"
+  }
+}
